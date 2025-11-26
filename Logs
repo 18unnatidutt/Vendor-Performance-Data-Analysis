@@ -1,1 +1,18 @@
 
+import logging
+
+# Create and configure logger
+logging.basicConfig(
+    filename="analysis_log.log",        # Log file name
+    level=logging.INFO,                 # Logging level
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+
+# Example log entries
+logging.info("Starting vendor invoice analysis...")
+logging.info("Loaded vendor_invoice dataframe successfully.")
+logging.info("Monthly trend plot generated.")
+logging.warning("Some rows had invalid InvoiceDate values.")
+logging.error("Missing values detected in Dollars column.")
+logging.info("Analysis completed.")
